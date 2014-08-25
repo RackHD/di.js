@@ -9,4 +9,8 @@ if (typeof Map === 'undefined') {
   require('es6-shim');
 }
 
-module.exports = require('../dist/cjs/index');
+if (!global.__di) {
+  global.__di = require('../dist/cjs/index'); 
+}
+
+module.exports = global.__di;
