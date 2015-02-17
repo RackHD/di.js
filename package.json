@@ -1,6 +1,6 @@
 {
   "name": "di",
-  "version": "2.0.0-pre-11",
+  "version": "2.0.0-pre-14",
   "description": "A DI framework.",
   "main": "node/index.js",
   "homepage": "https://github.com/angular/di.js",
@@ -12,7 +12,7 @@
     "url": "https://github.com/angular/di.js/issues"
   },
   "dependencies": {
-    "traceur": "~0.0.33",
+    "traceur": "0.0.33",
     "es6-shim": "~0.11.0"
   },
   "devDependencies": {

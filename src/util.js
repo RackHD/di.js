@@ -1,19 +1,8 @@
 // A bunch of helper functions.
 
-
 function isUpperCase(char) {
   return char.toUpperCase() === char;
 }
-
-
-function isClass(clsOrFunction) {
-  if (clsOrFunction.name) {
-    return isUpperCase(clsOrFunction.name.charAt(0));
-  }
-
-  return Object.keys(clsOrFunction.prototype).length > 0;
-}
-
 
 function isFunction(value) {
   return typeof value === 'function';
@@ -41,11 +30,17 @@ function toString(token) {
   return token.toString();
 }
 
+var ownKeys = (this.Reflect && Reflect.ownKeys ? Reflect.ownKeys : function ownKeys(O) {
+  var keys = Object.getOwnPropertyNames(O);
+  if (Object.getOwnPropertySymbols) return keys.concat(Object.getOwnPropertySymbols(O));
+  return keys;
+});
+
 
 export {
   isUpperCase,
-  isClass,
   isFunction,
   isObject,
-  toString
+  toString,
+  ownKeys
 };
