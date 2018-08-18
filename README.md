@@ -9,7 +9,7 @@ This readme describes how to set up your working space in order to run the tests
 # Clone this repo (or your fork).
 git clone https://github.com/angular/di.js.git
 
-# Install all the the dev dependencies, such as Karma, Gulp, etc.
+# Install all the dev dependencies, such as Karma, Gulp, etc.
 npm install
 
 # If you wanna use "karma" or "gulp" commands, install also:
